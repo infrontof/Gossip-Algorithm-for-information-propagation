@@ -1,0 +1,33 @@
+@model googleCalendar.Models.LoginModel
+
+@{
+    ViewBag.Title = "login";
+}
+<h3>Please login to see your Calendar Event</h3>
+<br />
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Site.css")" />
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Username)
+    @Html.TextBoxFor(m => m.Username)
+    @Html.LabelFor(m => m.Password)
+    @Html.PasswordFor(m => m.Password)
+    <input type="submit" />
+    @Html.ValidationSummary()
+
+}
+<div>
+    <br><br><hr /><br><br>
+    <h3>Or you can login your google calendar</h3>
+    <button id="authorize-button">Click here to login in google</button>
+    <script src="@Url.Content("~/Scripts/loginGoogle.js")" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad "></script>
+
+    <hr />
+    <h5>calendar name：<span id="googleCalendarName"></span></h5>
+    <h5>Event list：</h5>
+    <div id="GoogleEvents"></div>
+</div>
