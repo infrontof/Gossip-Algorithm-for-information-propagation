@@ -1,0 +1,21 @@
+
+@{
+    if (Request.IsAuthenticated)
+    {
+        ViewBag.Title = "profile";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else 
+    {
+        ViewBag.Title = "profile";
+      
+    }
+   
+}
+
+<h4>Welcome Login</h4>
+
+<br />
+<div class="scheduler_container">
+    @Html.Raw(Model.Render())
+</div>
