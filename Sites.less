@@ -1,0 +1,39 @@
+@colorbase: #ff0000;
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.scheduler_container{
+	width:100%;
+	height:600px;
+	border:1px solid #aeaeae;
+
+}
+
+.field-validation-error
+{
+	color: @colorbase;
+}
+
+.field-validation-valid
+{
+	display: none;
+}
+
+.input-validation-error
+{
+	border: 1px solid #006699;
+	background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+	font-weight: bold;
+	color: @colorbase;
+}
+
+.validation-summary-valid
+{
+	.field-validation-valid
+}
