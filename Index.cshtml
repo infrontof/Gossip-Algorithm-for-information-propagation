@@ -1,0 +1,13 @@
+
+
+@{
+    ViewBag.Title = "simpy googl calendar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="scheduler_container">
+    @Html.Raw(Model.Render())
+</div>
+<div>
+ <a href="Home/login">Click here to login</a>
+</div>
